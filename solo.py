@@ -387,3 +387,283 @@ a colon, and the expression to evaluate and return.
 # name = lambda x:2*x
 # print(name(10))
 
+
+'''
+map
+'''
+# def my_func(arg):
+#   return arg + 5
+
+# nums  = [11 , 33 , 44 , 88 , 13 ]
+# var1   = list(map(my_func , nums))
+# var2   = tuple(map(my_func , nums))
+# print(var1)  #return list 
+# print(var2)  # return tuple
+'''
+filter 
+'''
+# var3  = list(filter(lambda x: x>30,nums))  # filter the number in list abpve 30
+
+# print(var3)
+
+'''
+Generator
+Generators are a type of iterable, like lists or tuples.
+Unlike lists, they don't allow indexing with arbitrary 
+indices, but they can still be iterated through with 
+for loops.
+They can be created using functions and the yield 
+statement.
+In short, generators allow you to declare a function 
+that behaves like an iterator, i.e. it can be used 
+in a for loop.
+'''
+
+
+# def countdown():
+#     i=5
+#     while i > 0:
+#         yield i + 10
+#         i -= 1
+
+# for i in countdown():
+#     print(i)
+
+# def is_prime(arg):
+#     if arg > 1:
+#        for i in range(2, arg):
+#            if (arg % i) == 0:
+#                continue
+#        else:
+#            return arg
+
+# def get_primes(num):
+#     while True:
+#         if is_prime(num):        
+#             yield num
+#         num += 1
+
+# num = int(input('Enter number to test wether it is prime!'))
+# get_primes(num)
+
+
+
+# def numbers(x):
+#     for i in range(x):
+#         if i % 2 == 0:
+#             yield i
+
+# print(list(numbers(11)))
+
+# def make_word(num):
+#   word = ""
+#   for ch in num:
+#     word +=ch
+#     yield word
+
+# name = input('Enter word\n')
+# print(list(make_word(name)))
+
+
+
+'''
+Decorators
+
+Decorators provide a way to modify functions using 
+other functions.
+This is ideal when you need to extend the functionality 
+of functions that you don't want to modify.
+'''
+
+# def decor(func):
+#     def wrap():
+#         print("============")
+#         func()   # print hello world!
+#         print("============")
+#     return wrap
+
+# def print_text():
+#     print("Hello world!")
+
+# decorated = decor(print_text)
+# decorated()
+
+
+# def decor(func):
+#     def wrap():
+#         print("============")
+#         func()
+#         print("============")
+#     return wrap
+
+# @decor
+# def print_text():
+#     print("Hello world!")
+
+# print_text()
+
+
+'''
+Recursion
+
+
+Recursion is a very important concept in functional programming.
+The fundamental part of recursion is self-reference - functions 
+calling themselves. It is used to solve problems that can be 
+broken up into easier sub-problems of the same type.
+
+A classic example of a function that is implemented recursively 
+is the factorial function, which finds the product of all 
+positive integers below a specified number.
+For example, 5! (5 factorial) is 5 * 4 * 3 * 2 * 1 (120). 
+To implement this recursively, notice that
+5! = 5 * 4!, 4! = 4 * 3!, 3! = 3 * 2!, and so on. 
+Generally, n! = n * (n-1)!.
+'''
+# def factorial(x):
+#     if x == 1:   # define base case of the function
+#         return 1 # A case that stop the functionality of fucntion
+#     else: 
+#         return x * factorial(x-1)
+
+# print(factorial(500))
+
+
+# def is_even(x):
+#     if x == 0:
+#         print(f'Even function nummber {x}')
+#         return True
+#     else:
+#         return is_odd(x-1)
+# def is_odd(x):
+#     if x==0:
+#         print(f'odd function number{x}')
+#         return False
+#     else:
+#         return is_even(x-1)
+
+# print(is_odd(21))
+# print(is_even(22))
+
+'''
+Return some of  all list value using generator
+'''
+# def square(num):
+#     for i in num:
+#         yield i*2
+
+# nums = [2,2,3,3,4,4]
+# print(list(square(nums)))
+'''
+fibonacci series is the sume of  two previous proceding one
+numbers
+
+'''
+# def fib(x):
+#   if x == 0 or x == 1:
+#     return 1
+#   else:     #3         2
+#             #1         0
+#     return fib(x-1) + fib(x-2)
+# print(fib(4))
+
+'''
+Sets are data structures, similar to lists or dictionaries. 
+They are created using curly braces, or the set function. 
+They share some functionality with lists, such as the use 
+of in to check whether they contain a particular item.
+'''
+'''
+To create an empty set, you must use set(), as 
+{} creates an empty dictionary.
+
+'''
+
+# num_set = {1, 2, 3, 4, 5}
+# word = 'USMAN'
+# word_set = set(word)  # convert into set form
+# print(word_set)
+# print(3 in num_set)
+# print("U" not in word_set)
+
+
+'''
+Set functionality almost same as list and tuple
+'''
+# nums = {1, 2, 1, 3, 1, 4, 5, 6}
+# print(nums)
+# nums.add(-7)
+# nums.remove(3)
+# print(nums)
+
+'''
+The union operator | combines two sets to form a 
+new one containing items in either.
+The intersection operator & gets items only in both.
+The difference operator - gets items in the first set 
+but not in the second.
+The symmetric difference operator ^ gets items in 
+either set, but not both.
+'''
+# first = {1, 2, 3, 4, 5, 6}
+# second = {4, 5, 6, 7, 8, 9}
+
+# print(first | second)
+# print(first & second)
+# print(first - second)
+# print(second - first)
+# print(first ^ second)
+'''
+Basic uses of sets include membership testing and 
+the elimination of duplicate entries.
+'''
+
+
+"""
+Final DataTructure in pythhon are
+
+Data Structures
+
+
+As we have seen in the previous lessons, Python supports 
+the following data structures: lists, dictionaries, 
+tuples, sets.
+
+When to use a dictionary:
+- When you need a logical association between a 
+key:value pair.
+- When you need fast lookup for your data, based 
+on a custom key.
+- When your data is being constantly modified. 
+Remember, dictionaries are mutable.
+
+When to use the other types:
+- Use lists if you have a collection of data that does
+not need random access. Try to choose lists when you need a 
+simple, iterable collection that is modified frequently.
+- Use a set if you need uniqueness for the elements.
+- Use tuples when your data cannot change.
+
+"""
+
+
+# tup= (1,2,3,1)
+# print(tup)
+
+'''
+itertools
+A sander library in python
+
+'''
+# import time
+# from itertools import count
+
+# for i in count():  # we can also add parameter where count will start
+#     print(i)
+#     time.sleep(0.2)
+#     if i >=11:
+#         break
+
+
+
+
