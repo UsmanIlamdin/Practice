@@ -663,7 +663,39 @@ A sander library in python
 #     time.sleep(0.2)
 #     if i >=11:
 #         break
+'''
+other functionality of itertools
+There are many functions in itertools that operate on 
+iterables, in a similar way to map and filter.
+Some examples:
+takewhile - takes items from an iterable while a 
+predicate function remains true;
+chain - combines several iterables into one long one;
+accumulate - returns a running total of values in 
+an iterable.
+'''
+# from itertools import accumulate, takewhile
+# nums = list(accumulate(range(8)))
+# print(nums)
+# print(list(takewhile(lambda x: x<= 6, nums)))
+'''
+Permutation & product
+
+There are also several combinatoric functions in itertool, 
+such as product and permutation.
+These are used when you want to accomplish a task with all 
+possible combinations of some items.
+'''
 
 
+from itertools import product, permutations
+import time
+nums = [1,0,0,0,1,0,0,0,0,1,0,1,0,1,1,1,1,0,0,0,0,0,0,0]
+letters = ("A", "B")
+print(list(product(letters, range(2))))
+print(list(permutations(letters)))
+# print(list(permutations(nums))) 
 
-
+for i in list(permutations(nums)):
+    print(i)
+    time.sleep(0.8)
