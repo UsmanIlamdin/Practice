@@ -688,14 +688,80 @@ possible combinations of some items.
 '''
 
 
-from itertools import product, permutations
-import time
-nums = [1,0,0,0,1,0,0,0,0,1,0,1,0,1,1,1,1,0,0,0,0,0,0,0]
-letters = ("A", "B")
-print(list(product(letters, range(2))))
-print(list(permutations(letters)))
+# from itertools import product, permutations
+# nums = [1 , 3 ,4, 5]
+# letters = ("A", "B")
+# print(list(product(letters, range(2))))
+# print(list(permutations(letters)))
 # print(list(permutations(nums))) 
+#print(list(permutations(nums,3))) # give permutations of length 3 
 
-for i in list(permutations(nums)):
-    print(i)
-    time.sleep(0.8)
+# for i in list(permutations(nums)):
+#     print(i)
+
+'''
+Combinations
+'''
+
+# from itertools import combinations , combinations_with_replacement
+
+# # A Python program to print all 
+# # combinations of given length 
+# from itertools import combinations 
+
+# # Get all combinations of [1, 2, 3] 
+# # and length 2 
+# comb = combinations([1, 2, 3], 2) 
+# # Print the obtained combinations 
+# for i in list(comb): 
+# 	print (i) 
+
+
+
+
+
+
+'''
+
+
+Object-Oriented Programming (OOP) Vocabulary
+
+'''
+
+
+'''
+Object has characteristic and do some action
+these characteristic  are attributes and actions
+are methods in OOP
+
+'''
+
+'''
+
+class - a blueprint consisting of methods and attributes
+object - an instance of a class. It can help to think of 
+objects as something in the real world like a yellow pencil, 
+a small dog, a blue shirt, etc. However, as you'll see later 
+in the lesson, objects can be more abstract.
+
+attribute - a descriptor or characteristic. Examples 
+would be color, length, size, etc. These attributes can 
+take on specific values like blue, 3 inches, large, etc.
+method - an action that a class or object could take
+OOP - a commonly used abbreviation for object-oriented programming
+encapsulation - one of the fundamental ideas behind object-oriented 
+programming is called encapsulation: you can combine functions and 
+data all into a single entity. In object-oriented programming, this 
+single entity is called a class. Encapsulation allows you to hide 
+implementation details much like how the scikit-learn package hides 
+the implementation of machine learning algorithms.
+
+'''
+
+
+
+
+
+
+
+
