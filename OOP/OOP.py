@@ -1,7 +1,5 @@
 
 '''
-
-
 Object-Oriented Programming (OOP) Vocabulary
 
 '''
@@ -14,8 +12,8 @@ are methods in OOP
 
 '''
 
-'''
 
+'''
 class - a blueprint consisting of methods and attributes
 object - an instance of a class. It can help to think of 
 objects as something in the real world like a yellow pencil, 
@@ -71,7 +69,9 @@ class Pants:
 
         return self.price * (1 - discount)
 
-
+'''
+Write test function to the the results for output.
+'''
 # def check_results():
 #     pants = Pants('red', 35, 36, 15.12)
 #     assert pants.color == 'red'
@@ -105,8 +105,6 @@ class SalesPerson:
 
     def display_sales(self):
        
-
-
         for pants in self.pants_sold:
             print('color: {}, waist_size: {}, length: {}, price: {}'\
                   .format(pants.color, pants.waist_size, pants.length, pants.price))
@@ -134,7 +132,9 @@ class SalesPerson:
 
         sales_total = self.calculate_sales()
         return sales_total * percentage 
-
+'''
+Check case for sale person
+'''
 # def check_results():
 #     pants_one = Pants('red', 35, 36, 15.12)
 #     pants_two = Pants('blue', 40, 38, 24.12)
@@ -159,32 +159,39 @@ class SalesPerson:
 #     assert round(salesperson.calculate_sales(),2) == 47.36
 #     assert round(salesperson.calculate_commission(.1),2) == 4.74
 
-Shirt('red' , 'S' , 'short sleeve' , 15)
 
-Shirt_One = Shirt('blue' , 'S' , 'short sleeve' , 15)
+# Shirt('red' , 'S' , 'short sleeve' , 15)
 
-
-print(Shirt_One.price)
-print(Shirt_One.colour)
-print(Shirt_One.style)
-print(Shirt_One.size)
+# Shirt_One = Shirt('blue' , 'S' , 'short sleeve' , 15)
 
 
-Shirt_One.change_price(20)
+# print(Shirt_One.price)
+# print(Shirt_One.colour)
+# print(Shirt_One.style)
+# print(Shirt_One.size)
 
-print(Shirt_One.price)
 
-Shirt_One.discount(0.2)
+# Shirt_One.change_price(20)
 
-print(Shirt_One.discount(0.2))
+# print(Shirt_One.price)
 
-Shirt_Two = Shirt('red' , 'L' , 'half sleeve' , 10)
+# Shirt_One.discount(0.2)
+
+# print(Shirt_One.discount(0.2))
+
+# Shirt_Two = Shirt('red' , 'L' , 'half sleeve' , 10)
  
-Shirt_Three = Shirt('blue' , 'XL' , 'medium sleeve' , 12)
+# Shirt_Three = Shirt('blue' , 'XL' , 'medium sleeve' , 12)
 
-Shirt_Four = Shirt('orange' , 'XXL' , 'short sleeve' , 20)
+# Shirt_Four = Shirt('orange' , 'XXL' , 'short sleeve' , 20)
 
-total = [Shirt_One , Shirt_Two , Shirt_Three , Shirt_Four]
+# total = [Shirt_One , Shirt_Two , Shirt_Three , Shirt_Four]
 
-for shirt in range(len(total)):
-    print(total[shirt].colour)
+# for shirt in range(len(total)):
+#     print(total[shirt].colour)
+
+
+
+
+
+

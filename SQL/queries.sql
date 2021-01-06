@@ -60,3 +60,6 @@ FROM `employees`;
 
 SELECT CONCAT(UPPER(firstName) ,'--' , UPPER(lastName))
 FROM `employees` ;
+
+SELECT *
+FROM `orderdetails`;
