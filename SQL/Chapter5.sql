@@ -279,3 +279,12 @@ SELECT CONCAT(fname , lname)
 FROM `employee`
 WHERE dno in (1,2,3);
 
+
+USE company;
+
+SELECT COUNT(*)
+FROM `dept_locations` , `department`;
+
+
+SELECT *
+FROM `department`;
