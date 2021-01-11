@@ -3,7 +3,6 @@ class Node:
     init the class that set all the  parameters
     for Link List Node
     '''
-
     def __init__(self, val):
         self.data = val
         self.next = None
