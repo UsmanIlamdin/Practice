@@ -35,3 +35,14 @@ project.plocation = 'Stafford'
 AND
 department.dnumber = project.dnum ; 
 
+
+-- Retrive the distict salary of all `employee`
+
+SElECT DISTINCTROW employee.salary
+FROM `employee` ; 
+
+-- Retrive the all salary of all `employee`
+
+SElECT ALL employee.salary
+FROM `employee` ; 
+
