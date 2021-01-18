@@ -46,3 +46,29 @@ FROM `employee` ;
 SElECT ALL employee.salary
 FROM `employee` ; 
 
+
+-- Retrive all the project number in which 
+-- lname = smith work either employess or as an 
+-- worker
+
+-- this query retrive all pnumber in which SMith work as an 
+-- manager
+SELECT DISTINCTROW project.pnumber
+FROM `employee` , `department` , `project`
+WHERE employee.ssn = department.mgrssn 
+AND 
+department.dnumber = project.dnum
+AND
+employee.lname = 'Smith'   
+
+UNION 
+-- this query will return all pnumber in which smith work as an worker
+SELECT DISTINCTROW project.pnumber
+FROM `employee` , `works_on` , `project`
+WHERE employee.ssn = works_on.essn 
+AND
+employee.lname = 'Smith'
+AND
+project.dnum = works_on.pno 
+; 
+
