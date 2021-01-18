@@ -51,6 +51,7 @@ class LinkedList:
         new_node = Node(item)
         new_node.setNext(self.head)
         self.head = new_node
+
     def printlist(self):
         '''
         print the whole linked list
@@ -84,8 +85,92 @@ class LinkedList:
             current= current.getNext()
         return count
 
+    def insert(self , position , item):
+        '''
+        insert item into linked list at given index
+        '''
+        if position > self.size() - 1: 
+            raise IndexError ("Index out of bounds.")
+        current = self.head 
+        previous = None 
+        pos = 0 
+        if position is 0: 
+            self.add(item)
+        else:
+            new_node = Node(item) 
+            while pos < position: 
+                pos += 1 
+                previous = current 
+                current = current.getNext()
+            previous.setNext(new_node) 
+            new_node.setNext(current)
+
+    def index(self, item): 
+        """
+        Return the index where item is found.
+        If item is not found, return None. """
+        current = self.head 
+        pos = 0 
+        found = False 
+        while current is not None and not found: 
+            if current.getData() is item: 
+                found = True
+            else:
+                current = current.getNext() 
+                pos += 1
+        if found: 
+            pass
+        else: 
+            pos = None
+        return pos
+    def pop(self, position = None): 
+        """If no argument is provided, return and remove the item at the head. If position is provided, return and remove the item at that position.
+        If index is out of bounds, raise IndexError """ 
+        if position > self.size():
+            raise IndexError('Index out of bounds')
+        
+        current = self.head 
+        if position is None: 
+            ret = current.getData() 
+            self.head = current.getNext()
+        else:
+            pos = 0 
+            previous = None 
+            while pos < position: 
+                previous = current 
+                current = current.getNext() 
+                pos += 1 
+                ret = current.getData()
+            previous.setNext(current.getNext())
+        print (ret)
+        return ret
+    def append(self, item):
+        """Append item to the end of the list""" 
+        current = self.head 
+        previous = None 
+        pos = 0 
+        length = self.size() 
+        while pos < length: 
+            previous = current 
+            current = current.getNext() 
+            pos += 1
+        new_node = Node(item) 
+        if previous is None: 
+            new_node.setNext(current) 
+            self.head = new_node
+        else: 
+            previous.setNext(new_node)
+
 ll = LinkedList()
 ll.add('a')
+ll.add('b')
+ll.add('c')
+ll.insert(2,'f')
+ll.append(2)
+ll.pop(2)
 ll.printlist()
+
+
+print('Required values \n')
 print(ll.size())
 print(ll.search('a'))
