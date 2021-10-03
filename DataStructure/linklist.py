@@ -40,9 +40,9 @@ class LinkedList:
     def isEmpty(self):
         '''
         check wheather linked list is empty or not
-        and retunr True if Empty else return False
+        and return True if Empty else return False
         '''
-        return sef.head is None
+        return self.head is None
 
     def add(self, item):
         '''
