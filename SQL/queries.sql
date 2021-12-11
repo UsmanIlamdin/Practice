@@ -106,3 +106,18 @@ ORDER BY `employee`.salary DESC
 LIMIT 1,1;
 
 
+SELECT (COUNT(*) - COUNT(`employee`.superssn))
+FROM `employee`;
+
+
+SELECT SUM(`employee`.salary)
+FROM `employee`;
+
+
+
+SELECT AVG(`employee`.fname)
+FROM `employee`;
+
+
+
+
